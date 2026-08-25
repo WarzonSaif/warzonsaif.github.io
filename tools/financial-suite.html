@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business &amp; Financial Tools Suite | SIP, Compound Interest, Inflation | PooreYouTuber Tools</title>
+    <meta name="description" content="Calculate Systematic Investment Plans (SIP), Compound Interest growth, inflation purchasing power, and GST/VAT taxes online.">
+    <meta name="keywords" content="financial suite, sip calculator, compound interest calculator, inflation calculator, gst calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://127.0.0.1:8000/tools/financial-suite.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:8000/tools/financial-suite.html">
+    <meta property="og:title" content="Business &amp; Financial Tools Suite | SIP, Compound Interest, Inflation | PooreYouTuber Tools">
+    <meta property="og:description" content="Calculate Systematic Investment Plans (SIP), Compound Interest growth, inflation purchasing power, and GST/VAT taxes online.">
+    <meta property="og:image" content="/assets/images/logo.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Business &amp; Financial Tools Suite | SIP, Compound Interest, Inflation | PooreYouTuber Tools">
+    <meta name="twitter:description" content="Calculate Systematic Investment Plans (SIP), Compound Interest growth, inflation purchasing power, and GST/VAT taxes online.">
+    <meta name="twitter:image" content="/assets/images/logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Google AdSense -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7020422718957281" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics (GA4) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPMC525FGT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZPMC525FGT');
+        </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PooreYouTuber Tools",
+      "url": "http://127.0.0.1:8000/tools",
+      "description": "Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://127.0.0.1:8000/tools/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="light-mode">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="/index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="logo-text">Poore<span>YouTuber</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/articles.html">Articles</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    <span id="theme-text">Dark Mode</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="main-wrapper">
+    <div class="tool-page-container">
+        <div class="tool-page-header">
+            <div class="header-icon"><i class="fa-solid fa-coins"></i></div>
+            <div class="header-info">
+                <h1>Financial Tools Suite</h1>
+                <p>Calculate SIP investments, compound interest trajectories, and inflation impact over time.</p>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="6541049739" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+            <!-- SIP Calculator -->
+            <div class="tool-page-card" style="margin-bottom: 0;">
+                <h3><i class="fa-solid fa-piggy-bank"></i> Systematic Investment Plan (SIP)</h3>
+                
+                <div class="form-group" style="margin-top: 15px;">
+                    <label class="form-label">Monthly Investment ($)</label>
+                    <input type="number" id="sip-monthly" class="form-control" value="500">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Expected Annual Return Rate (%)</label>
+                    <input type="number" id="sip-rate" class="form-control" value="12" step="0.5">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Time Period (Years)</label>
+                    <input type="number" id="sip-years" class="form-control" value="10">
+                </div>
+
+                <div style="padding: 15px; background: var(--yt-light-red); border-radius: var(--radius-sm); margin-top: 15px;">
+                    <div>Invested Amount: <strong id="sip-invested" style="color: #64748b;">$60,000.00</strong></div>
+                    <div>Estimated Returns: <strong id="sip-returns" style="color: #10b981;">$56,017.00</strong></div>
+                    <div style="margin-top: 5px; font-size: 1.1rem;">Total Maturity Value: <strong id="sip-total" style="color: var(--yt-red);">$116,017.00</strong></div>
+                </div>
+            </div>
+
+            <!-- Compound Interest Calculator -->
+            <div class="tool-page-card" style="margin-bottom: 0;">
+                <h3><i class="fa-solid fa-arrow-trend-up"></i> Compound Interest Calculator</h3>
+                
+                <div class="form-group" style="margin-top: 15px;">
+                    <label class="form-label">Initial Principal Amount ($)</label>
+                    <input type="number" id="ci-principal" class="form-control" value="10000">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Annual Interest Rate (%)</label>
+                    <input type="number" id="ci-rate" class="form-control" value="7" step="0.5">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Investment Duration (Years)</label>
+                    <input type="number" id="ci-years" class="form-control" value="5">
+                </div>
+
+                <div style="padding: 15px; background: var(--yt-light-red); border-radius: var(--radius-sm); margin-top: 15px;">
+                    <div>Total Interest Earned: <strong id="ci-interest" style="color: #10b981;">$4,025.52</strong></div>
+                    <div style="margin-top: 5px; font-size: 1.1rem;">Future Investment Value: <strong id="ci-total" style="color: var(--yt-red);">$14,025.52</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="4934693710" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    function calcSIP() {
+        const p = parseFloat(document.getElementById('sip-monthly').value) || 0;
+        const i = (parseFloat(document.getElementById('sip-rate').value) || 0) / 12 / 100;
+        const n = (parseFloat(document.getElementById('sip-years').value) || 0) * 12;
+
+        if (p > 0 && i > 0 && n > 0) {
+            const total = p * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+            const invested = p * n;
+            const returns = total - invested;
+
+            document.getElementById('sip-invested').textContent = '$' + invested.toLocaleString('en-US', { minimumFractionDigits: 2 });
+            document.getElementById('sip-returns').textContent = '$' + returns.toLocaleString('en-US', { minimumFractionDigits: 2 });
+            document.getElementById('sip-total').textContent = '$' + total.toLocaleString('en-US', { minimumFractionDigits: 2 });
+        }
+    }
+
+    function calcCI() {
+        const p = parseFloat(document.getElementById('ci-principal').value) || 0;
+        const r = (parseFloat(document.getElementById('ci-rate').value) || 0) / 100;
+        const t = parseFloat(document.getElementById('ci-years').value) || 0;
+
+        if (p > 0 && r > 0 && t > 0) {
+            const total = p * Math.pow(1 + r, t);
+            const interest = total - p;
+
+            document.getElementById('ci-interest').textContent = '$' + interest.toLocaleString('en-US', { minimumFractionDigits: 2 });
+            document.getElementById('ci-total').textContent = '$' + total.toLocaleString('en-US', { minimumFractionDigits: 2 });
+        }
+    }
+
+    ['sip-monthly', 'sip-rate', 'sip-years'].forEach(id => document.getElementById(id).addEventListener('input', calcSIP));
+    ['ci-principal', 'ci-rate', 'ci-years'].forEach(id => document.getElementById(id).addEventListener('input', calcCI));
+
+    calcSIP();
+    calcCI();
+});
+</script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4><i class="fa-brands fa-youtube"></i> PooreYouTuber Tools</h4>
+                <p>Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.</p>
+                <div class="footer-social-links">
+                    <a href="https://youtube.com/@pooreyoutuber" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Popular Tools</h5>
+                <ul>
+                    <li><a href="/tools/multi-live.html">Multi Live Browser</a></li>
+                    <li><a href="/tools/youtube-short-preview.html">Multi Shorts Views</a></li>
+                    <li><a href="/tools/youtube-thumbnail.html">Thumbnail Downloader</a></li>
+                    <li><a href="/tools/tags-generator.html">Viral Tags Generator</a></li>
+                    <li><a href="/tools/photo-to-pdf.html">Photo to PDF</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Categories</h5>
+                <ul>
+                    <li><a href="/index.html#youtube">YouTube Tools</a></li>
+                    <li><a href="/index.html#social">Social Multi-Browsers</a></li>
+                    <li><a href="/index.html#pdf_doc">PDF & Documents</a></li>
+                    <li><a href="/index.html#image">Image Converters</a></li>
+                    <li><a href="/index.html#seo_web">Web & SEO Utilities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Company & Legal</h5>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & Terms</a></li>
+                    <li><a href="/contact.html">Contact Support</a></li>
+                    <li><a href="/articles.html">Creator Guides</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PooreYouTuber Tools. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/disclaimer.html">Disclaimer</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/sitemap.xml">XML Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Global JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

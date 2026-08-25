@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Downloader | Download HD &amp; 4K Video Thumbnails Free | PooreYouTuber Tools</title>
+    <meta name="description" content="Free YouTube Thumbnail Downloader to grab high resolution 4K, 1080p, HD, and SD thumbnail images from any YouTube video or Short.">
+    <meta name="keywords" content="youtube thumbnail downloader, download yt thumbnail, 4k youtube thumbnail, hd video cover image download">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://127.0.0.1:8000/tools/youtube-thumbnail.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:8000/tools/youtube-thumbnail.html">
+    <meta property="og:title" content="YouTube Thumbnail Downloader | Download HD &amp; 4K Video Thumbnails Free | PooreYouTuber Tools">
+    <meta property="og:description" content="Free YouTube Thumbnail Downloader to grab high resolution 4K, 1080p, HD, and SD thumbnail images from any YouTube video or Short.">
+    <meta property="og:image" content="/assets/images/logo.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YouTube Thumbnail Downloader | Download HD &amp; 4K Video Thumbnails Free | PooreYouTuber Tools">
+    <meta name="twitter:description" content="Free YouTube Thumbnail Downloader to grab high resolution 4K, 1080p, HD, and SD thumbnail images from any YouTube video or Short.">
+    <meta name="twitter:image" content="/assets/images/logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Google AdSense -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7020422718957281" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics (GA4) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPMC525FGT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZPMC525FGT');
+        </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PooreYouTuber Tools",
+      "url": "http://127.0.0.1:8000/tools",
+      "description": "Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://127.0.0.1:8000/tools/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="light-mode">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="/index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="logo-text">Poore<span>YouTuber</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/articles.html">Articles</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    <span id="theme-text">Dark Mode</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="main-wrapper">
+    <div class="tool-page-container">
+        <div class="tool-page-header">
+            <div class="header-icon"><i class="fa-solid fa-image"></i></div>
+            <div class="header-info">
+                <h1>YouTube Thumbnail Downloader</h1>
+                <p>Fetch and download YouTube video thumbnails in Ultra HD (4K/1080p), High Definition, and standard resolutions.</p>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="6541049739" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        <div class="tool-page-card">
+            <div class="form-group">
+                <label class="form-label" for="thumb-url-input"><i class="fa-brands fa-youtube"></i> Enter YouTube Video URL or Short Link</label>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <input type="text" id="thumb-url-input" class="form-control" style="flex: 1; min-width: 260px;" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <button id="btn-fetch-thumb" class="btn btn-primary"><i class="fa-solid fa-download"></i> Get Thumbnails</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails Display Grid -->
+        <div id="thumb-results" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px;">
+            <!-- Ultra HD / Max Res -->
+            <div class="tool-page-card" style="padding: 20px; text-align: center; margin-bottom: 0;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fa-solid fa-crown" style="color: #ffd700;"></i> Ultra HD (1280x720 / 4K)</h3>
+                <div style="aspect-ratio: 16/9; background: #000; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 15px;">
+                    <img id="img-maxres" src="" alt="Maxres Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <button onclick="downloadImage('img-maxres', 'youtube-thumbnail-maxres.jpg')" class="btn btn-primary btn-sm" style="width: 100%;"><i class="fa-solid fa-download"></i> Download Max HD</button>
+            </div>
+
+            <!-- Standard HD -->
+            <div class="tool-page-card" style="padding: 20px; text-align: center; margin-bottom: 0;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fa-solid fa-tv" style="color: #3b82f6;"></i> High Definition (640x480)</h3>
+                <div style="aspect-ratio: 16/9; background: #000; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 15px;">
+                    <img id="img-sd" src="" alt="Standard Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <button onclick="downloadImage('img-sd', 'youtube-thumbnail-sd.jpg')" class="btn btn-primary btn-sm" style="width: 100%;"><i class="fa-solid fa-download"></i> Download High Def</button>
+            </div>
+
+            <!-- Medium Quality -->
+            <div class="tool-page-card" style="padding: 20px; text-align: center; margin-bottom: 0;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fa-solid fa-photo-film" style="color: #10b981;"></i> Medium Quality (480x360)</h3>
+                <div style="aspect-ratio: 16/9; background: #000; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 15px;">
+                    <img id="img-hq" src="" alt="HQ Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <button onclick="downloadImage('img-hq', 'youtube-thumbnail-hq.jpg')" class="btn btn-primary btn-sm" style="width: 100%;"><i class="fa-solid fa-download"></i> Download Medium Quality</button>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="4934693710" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        <div class="seo-article-card">
+            <h2><i class="fa-solid fa-circle-info"></i> How to Download YouTube Thumbnails in Full Resolution</h2>
+            <p>Our online thumbnail grabber extracts the original high-resolution graphic cover images directly from Google/YouTube media delivery servers without quality degradation. Simply paste your video link and choose from available resolution qualities.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const urlInput = document.getElementById('thumb-url-input');
+
+    function extractVideoID(url) {
+        if (!url) return '';
+        url = url.trim();
+        if (/^[a-zA-Z0-9_-]{11}$/.test(url)) return url;
+        const regExp = /^.*(shorts\/|youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : url;
+    }
+
+    function fetchThumbnails() {
+        const id = extractVideoID(urlInput.value);
+        if (!id) {
+            showToast('Please enter a valid YouTube Video URL', 'error');
+            return;
+        }
+
+        const maxres = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+        const sd = `https://img.youtube.com/vi/${id}/sddefault.jpg`;
+        const hq = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
+        document.getElementById('img-maxres').src = maxres;
+        document.getElementById('img-sd').src = sd;
+        document.getElementById('img-hq').src = hq;
+
+        showToast('Thumbnails loaded successfully!', 'success');
+    }
+
+    window.downloadImage = function(imgElementId, filename) {
+        const img = document.getElementById(imgElementId);
+        if (!img || !img.src) return;
+
+        // Fetch image as blob to trigger true download dialog
+        fetch(img.src)
+            .then(res => res.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                showToast(`Downloaded ${filename}!`, 'success');
+            })
+            .catch(() => {
+                // Fallback direct open
+                window.open(img.src, '_blank');
+            });
+    };
+
+    document.getElementById('btn-fetch-thumb').addEventListener('click', fetchThumbnails);
+    fetchThumbnails();
+});
+</script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4><i class="fa-brands fa-youtube"></i> PooreYouTuber Tools</h4>
+                <p>Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.</p>
+                <div class="footer-social-links">
+                    <a href="https://youtube.com/@pooreyoutuber" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Popular Tools</h5>
+                <ul>
+                    <li><a href="/tools/multi-live.html">Multi Live Browser</a></li>
+                    <li><a href="/tools/youtube-short-preview.html">Multi Shorts Views</a></li>
+                    <li><a href="/tools/youtube-thumbnail.html">Thumbnail Downloader</a></li>
+                    <li><a href="/tools/tags-generator.html">Viral Tags Generator</a></li>
+                    <li><a href="/tools/photo-to-pdf.html">Photo to PDF</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Categories</h5>
+                <ul>
+                    <li><a href="/index.html#youtube">YouTube Tools</a></li>
+                    <li><a href="/index.html#social">Social Multi-Browsers</a></li>
+                    <li><a href="/index.html#pdf_doc">PDF & Documents</a></li>
+                    <li><a href="/index.html#image">Image Converters</a></li>
+                    <li><a href="/index.html#seo_web">Web & SEO Utilities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Company & Legal</h5>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & Terms</a></li>
+                    <li><a href="/contact.html">Contact Support</a></li>
+                    <li><a href="/articles.html">Creator Guides</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PooreYouTuber Tools. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/disclaimer.html">Disclaimer</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/sitemap.xml">XML Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Global JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="ytRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2e2e"/>
+      <stop offset="100%" stop-color="#b80000"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="url(#ytRedGrad)"/>
+  <!-- Multi-window symbol and play button -->
+  <rect x="20" y="22" width="26" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+  <rect x="54" y="22" width="26" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+  <rect x="20" y="52" width="26" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+  <rect x="54" y="52" width="26" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+  <polygon points="44,40 44,60 62,50" fill="#ff0000"/>
+</svg>

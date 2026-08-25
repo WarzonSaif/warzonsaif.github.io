@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo to PDF Converter Online | Convert Images to PDF Free | PooreYouTuber Tools</title>
+    <meta name="description" content="Convert multiple JPG, PNG, and WebP images into a single PDF document in your web browser with custom orientation and zero upload delay.">
+    <meta name="keywords" content="photo to pdf, image to pdf converter, convert jpg to pdf, merge images into pdf free">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://127.0.0.1:8000/tools/photo-to-pdf.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:8000/tools/photo-to-pdf.html">
+    <meta property="og:title" content="Photo to PDF Converter Online | Convert Images to PDF Free | PooreYouTuber Tools">
+    <meta property="og:description" content="Convert multiple JPG, PNG, and WebP images into a single PDF document in your web browser with custom orientation and zero upload delay.">
+    <meta property="og:image" content="/assets/images/logo.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo to PDF Converter Online | Convert Images to PDF Free | PooreYouTuber Tools">
+    <meta name="twitter:description" content="Convert multiple JPG, PNG, and WebP images into a single PDF document in your web browser with custom orientation and zero upload delay.">
+    <meta name="twitter:image" content="/assets/images/logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Google AdSense -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7020422718957281" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics (GA4) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPMC525FGT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZPMC525FGT');
+        </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PooreYouTuber Tools",
+      "url": "http://127.0.0.1:8000/tools",
+      "description": "Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://127.0.0.1:8000/tools/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="light-mode">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="/index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="logo-text">Poore<span>YouTuber</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/articles.html">Articles</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    <span id="theme-text">Dark Mode</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<div class="main-wrapper">
+    <div class="tool-page-container">
+        <div class="tool-page-header">
+            <div class="header-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="header-info">
+                <h1>Photo to PDF Converter</h1>
+                <p>Convert multiple photos and graphic images into a single organized PDF document securely in your browser.</p>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="6541049739" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        <div class="tool-page-card" style="text-align: center;">
+            <div style="border: 2px dashed var(--yt-border); border-radius: var(--radius-md); padding: 40px 20px; cursor: pointer;" id="pdf-drop-zone">
+                <i class="fa-solid fa-images" style="font-size: 3.5rem; color: var(--yt-red); margin-bottom: 15px;"></i>
+                <h3>Select or Drop Images to Convert</h3>
+                <p style="color: var(--yt-text-muted); margin-bottom: 20px;">Supports JPG, PNG, WebP, BMP (Multiple files allowed)</p>
+                <input type="file" id="image-files-input" accept="image/*" multiple style="display: none;">
+                <button onclick="document.getElementById('image-files-input').click()" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Choose Image Files</button>
+            </div>
+
+            <!-- Options & Preview Panel -->
+            <div id="pdf-convert-panel" style="display: none; margin-top: 25px; text-align: left;">
+                <div style="display: flex; gap: 15px; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+                    <div>
+                        <label class="form-label" style="display: inline-block; margin-right: 10px;">Page Orientation:</label>
+                        <select id="pdf-orientation" class="form-control" style="width: auto; display: inline-block;">
+                            <option value="p">Portrait (Vertical)</option>
+                            <option value="l">Landscape (Horizontal)</option>
+                        </select>
+                    </div>
+
+                    <button id="btn-create-pdf" class="btn btn-primary"><i class="fa-solid fa-download"></i> Generate & Download PDF</button>
+                </div>
+
+                <h4 style="margin-bottom: 15px;"><i class="fa-solid fa-list"></i> Selected Images (<span id="img-count-badge">0</span>)</h4>
+                <div id="image-thumbnails-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px;"></div>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="4934693710" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    let selectedImages = [];
+    const fileInput = document.getElementById('image-files-input');
+    const dropZone = document.getElementById('pdf-drop-zone');
+    const convertPanel = document.getElementById('pdf-convert-panel');
+    const thumbsGrid = document.getElementById('image-thumbnails-grid');
+    const countBadge = document.getElementById('img-count-badge');
+    const orientationSelect = document.getElementById('pdf-orientation');
+
+    function handleFiles(files) {
+        if (!files.length) return;
+
+        Array.from(files).forEach(file => {
+            if (file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    selectedImages.push({ name: file.name, data: e.target.result });
+                    renderThumbnails();
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        convertPanel.style.display = 'block';
+    }
+
+    function renderThumbnails() {
+        thumbsGrid.innerHTML = '';
+        countBadge.textContent = selectedImages.length;
+
+        selectedImages.forEach((img, idx) => {
+            const wrap = document.createElement('div');
+            wrap.style.cssText = 'position: relative; aspect-ratio: 1; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--yt-border);';
+
+            wrap.innerHTML = `
+                <img src="${img.data}" style="width: 100%; height: 100%; object-fit: cover;">
+                <button onclick="removeImage(${idx})" style="position: absolute; top: 4px; right: 4px; background: rgba(0,0,0,0.7); color: #fff; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer;" title="Remove image">&times;</button>
+            `;
+            thumbsGrid.appendChild(wrap);
+        });
+    }
+
+    window.removeImage = function(idx) {
+        selectedImages.splice(idx, 1);
+        if (selectedImages.length === 0) {
+            convertPanel.style.display = 'none';
+        } else {
+            renderThumbnails();
+        }
+    };
+
+    fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.style.borderColor = 'var(--yt-red)'; });
+    dropZone.addEventListener('dragleave', () => { dropZone.style.borderColor = 'var(--yt-border)'; });
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.style.borderColor = 'var(--yt-border)';
+        handleFiles(e.dataTransfer.files);
+    });
+
+    document.getElementById('btn-create-pdf').addEventListener('click', async () => {
+        if (!selectedImages.length) {
+            showToast('Please add at least one image', 'error');
+            return;
+        }
+
+        const { jsPDF } = window.jspdf;
+        const orientation = orientationSelect.value;
+        const doc = new jsPDF({ orientation: orientation, unit: 'mm', format: 'a4' });
+
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const pageHeight = doc.internal.pageSize.getHeight();
+
+        selectedImages.forEach((img, index) => {
+            if (index > 0) doc.addPage();
+            doc.addImage(img.data, 'JPEG', 10, 10, pageWidth - 20, pageHeight - 20, undefined, 'FAST');
+        });
+
+        doc.save('converted-document.pdf');
+        showToast('PDF generated and downloaded successfully!', 'success');
+    });
+});
+</script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4><i class="fa-brands fa-youtube"></i> PooreYouTuber Tools</h4>
+                <p>Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.</p>
+                <div class="footer-social-links">
+                    <a href="https://youtube.com/@pooreyoutuber" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Popular Tools</h5>
+                <ul>
+                    <li><a href="/tools/multi-live.html">Multi Live Browser</a></li>
+                    <li><a href="/tools/youtube-short-preview.html">Multi Shorts Views</a></li>
+                    <li><a href="/tools/youtube-thumbnail.html">Thumbnail Downloader</a></li>
+                    <li><a href="/tools/tags-generator.html">Viral Tags Generator</a></li>
+                    <li><a href="/tools/photo-to-pdf.html">Photo to PDF</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Categories</h5>
+                <ul>
+                    <li><a href="/index.html#youtube">YouTube Tools</a></li>
+                    <li><a href="/index.html#social">Social Multi-Browsers</a></li>
+                    <li><a href="/index.html#pdf_doc">PDF & Documents</a></li>
+                    <li><a href="/index.html#image">Image Converters</a></li>
+                    <li><a href="/index.html#seo_web">Web & SEO Utilities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Company & Legal</h5>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & Terms</a></li>
+                    <li><a href="/contact.html">Contact Support</a></li>
+                    <li><a href="/articles.html">Creator Guides</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PooreYouTuber Tools. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/disclaimer.html">Disclaimer</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/sitemap.xml">XML Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Global JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

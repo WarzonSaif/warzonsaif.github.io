@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameSnap | High Quality Video to Image Converter | PooreYouTuber Tools</title>
+    <meta name="description" content="Extract crystal clear high-resolution photo snapshots and still frames from any video at exact timestamps.">
+    <meta name="keywords" content="video to image, extract frames from video, framesnap, video snapshot maker online">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://127.0.0.1:8000/tools/video-to-image.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:8000/tools/video-to-image.html">
+    <meta property="og:title" content="FrameSnap | High Quality Video to Image Converter | PooreYouTuber Tools">
+    <meta property="og:description" content="Extract crystal clear high-resolution photo snapshots and still frames from any video at exact timestamps.">
+    <meta property="og:image" content="/assets/images/logo.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FrameSnap | High Quality Video to Image Converter | PooreYouTuber Tools">
+    <meta name="twitter:description" content="Extract crystal clear high-resolution photo snapshots and still frames from any video at exact timestamps.">
+    <meta name="twitter:image" content="/assets/images/logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Google AdSense -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7020422718957281" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics (GA4) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPMC525FGT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZPMC525FGT');
+        </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PooreYouTuber Tools",
+      "url": "http://127.0.0.1:8000/tools",
+      "description": "Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://127.0.0.1:8000/tools/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="light-mode">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="/index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="logo-text">Poore<span>YouTuber</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/articles.html">Articles</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    <span id="theme-text">Dark Mode</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="main-wrapper">
+    <div class="tool-page-container">
+        <div class="tool-page-header">
+            <div class="header-icon"><i class="fa-solid fa-camera"></i></div>
+            <div class="header-info">
+                <h1>FrameSnap: Video to Image Extractor</h1>
+                <p>Play video and capture exact frame snapshots in full original resolution with one click.</p>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="6541049739" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        <div class="tool-page-card" style="text-align: center;">
+            <div style="border: 2px dashed var(--yt-border); border-radius: var(--radius-md); padding: 40px 20px; cursor: pointer;" id="snap-drop">
+                <i class="fa-solid fa-film" style="font-size: 3.5rem; color: var(--yt-red); margin-bottom: 15px;"></i>
+                <h3>Select Video to Extract Frames</h3>
+                <p style="color: var(--yt-text-muted); margin-bottom: 20px;">Upload MP4, WebM, or MOV video file</p>
+                <input type="file" id="snap-video-input" accept="video/*" style="display: none;">
+                <button onclick="document.getElementById('snap-video-input').click()" class="btn btn-primary"><i class="fa-solid fa-folder-open"></i> Choose Video File</button>
+            </div>
+
+            <div id="framesnap-workspace" style="display: none; margin-top: 25px; text-align: left;">
+                <div style="text-align: center; background: #000; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 20px;">
+                    <video id="source-vid-elem" controls style="max-height: 420px; width: 100%;"></video>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+                    <button id="btn-snap-frame" class="btn btn-primary"><i class="fa-solid fa-camera"></i> Capture Current Frame</button>
+                    <span style="color: var(--yt-text-muted); font-size: 0.9rem;">Pause at your desired scene and click Capture.</span>
+                </div>
+
+                <h4><i class="fa-solid fa-images"></i> Captured Frames Gallery</h4>
+                <div id="captured-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; margin-top: 15px;"></div>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="4934693710" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('snap-video-input');
+    const workspace = document.getElementById('framesnap-workspace');
+    const video = document.getElementById('source-vid-elem');
+    const snapBtn = document.getElementById('btn-snap-frame');
+    const gallery = document.getElementById('captured-gallery');
+
+    input.addEventListener('change', (e) => {
+        if (!e.target.files.length) return;
+        const file = e.target.files[0];
+        const url = URL.createObjectURL(file);
+        video.src = url;
+        workspace.style.display = 'block';
+        showToast('Video ready! Pause and capture frames.', 'success');
+    });
+
+    snapBtn.addEventListener('click', () => {
+        if (!video.videoWidth) {
+            showToast('Please play/pause the video first', 'error');
+            return;
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        const dataUrl = canvas.toDataURL('image/png');
+
+        const card = document.createElement('div');
+        card.style.cssText = 'background: var(--yt-card); border: 1px solid var(--yt-border); border-radius: var(--radius-sm); overflow: hidden; padding: 10px; text-align: center;';
+
+        const timeStr = Math.floor(video.currentTime) + 's';
+        card.innerHTML = `
+            <img src="${dataUrl}" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; margin-bottom: 8px;">
+            <div style="font-size: 0.8rem; color: var(--yt-text-muted); margin-bottom: 8px;">Timestamp: ${timeStr} (${canvas.width}x${canvas.height})</div>
+            <a href="${dataUrl}" download="framesnap_${timeStr}.png" class="btn btn-primary btn-sm" style="width: 100%;"><i class="fa-solid fa-download"></i> Save PNG</a>
+        `;
+        gallery.prepend(card);
+
+        showToast('Captured frame snapshot!', 'success');
+    });
+});
+</script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4><i class="fa-brands fa-youtube"></i> PooreYouTuber Tools</h4>
+                <p>Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.</p>
+                <div class="footer-social-links">
+                    <a href="https://youtube.com/@pooreyoutuber" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Popular Tools</h5>
+                <ul>
+                    <li><a href="/tools/multi-live.html">Multi Live Browser</a></li>
+                    <li><a href="/tools/youtube-short-preview.html">Multi Shorts Views</a></li>
+                    <li><a href="/tools/youtube-thumbnail.html">Thumbnail Downloader</a></li>
+                    <li><a href="/tools/tags-generator.html">Viral Tags Generator</a></li>
+                    <li><a href="/tools/photo-to-pdf.html">Photo to PDF</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Categories</h5>
+                <ul>
+                    <li><a href="/index.html#youtube">YouTube Tools</a></li>
+                    <li><a href="/index.html#social">Social Multi-Browsers</a></li>
+                    <li><a href="/index.html#pdf_doc">PDF & Documents</a></li>
+                    <li><a href="/index.html#image">Image Converters</a></li>
+                    <li><a href="/index.html#seo_web">Web & SEO Utilities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Company & Legal</h5>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & Terms</a></li>
+                    <li><a href="/contact.html">Contact Support</a></li>
+                    <li><a href="/articles.html">Creator Guides</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PooreYouTuber Tools. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/disclaimer.html">Disclaimer</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/sitemap.xml">XML Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Global JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

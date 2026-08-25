@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Booster Tool | Multi-Session Website Traffic Viewer | PooreYouTuber Tools</title>
+    <meta name="description" content="Load and preview web pages across multi-instance sandbox containers with auto-refresh timers and responsiveness testing.">
+    <meta name="keywords" content="website booster, website multi viewer, website traffic booster sandbox, multi session web browser">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://127.0.0.1:8000/tools/website-booster.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:8000/tools/website-booster.html">
+    <meta property="og:title" content="Website Booster Tool | Multi-Session Website Traffic Viewer | PooreYouTuber Tools">
+    <meta property="og:description" content="Load and preview web pages across multi-instance sandbox containers with auto-refresh timers and responsiveness testing.">
+    <meta property="og:image" content="/assets/images/logo.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Website Booster Tool | Multi-Session Website Traffic Viewer | PooreYouTuber Tools">
+    <meta name="twitter:description" content="Load and preview web pages across multi-instance sandbox containers with auto-refresh timers and responsiveness testing.">
+    <meta name="twitter:image" content="/assets/images/logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Google AdSense -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7020422718957281" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics (GA4) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPMC525FGT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZPMC525FGT');
+        </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PooreYouTuber Tools",
+      "url": "http://127.0.0.1:8000/tools",
+      "description": "Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://127.0.0.1:8000/tools/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="light-mode">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="/index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="logo-text">Poore<span>YouTuber</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/articles.html">Articles</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    <span id="theme-text">Dark Mode</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="main-wrapper">
+    <div class="tool-page-container">
+        <div class="tool-page-header">
+            <div class="header-icon"><i class="fa-solid fa-rocket"></i></div>
+            <div class="header-info">
+                <h1>Website Booster & Multi-Session Viewer</h1>
+                <p>Preview websites across multiple isolated viewport containers with automated reload intervals.</p>
+            </div>
+        </div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="6541049739" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        <div class="tool-page-card">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px; align-items: end;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="site-url-input"><i class="fa-solid fa-globe"></i> Website URL</label>
+                    <input type="text" id="site-url-input" class="form-control" placeholder="https://example.com" value="https://wikipedia.org">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="site-screen-count"><i class="fa-solid fa-table-cells"></i> Screen Count (1 - 12)</label>
+                    <input type="number" id="site-screen-count" class="form-control" min="1" max="12" value="2">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="form-label" for="site-reload-timer"><i class="fa-solid fa-clock"></i> Auto Reload</label>
+                    <select id="site-reload-timer" class="form-control">
+                        <option value="0">Disabled</option>
+                        <option value="15">Every 15s</option>
+                        <option value="30">Every 30s</option>
+                        <option value="60">Every 60s</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <button id="btn-load-booster" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Launch Multi Booster</button>
+                <div id="booster-timer-text" style="font-weight: 600; color: var(--yt-red);"></div>
+            </div>
+        </div>
+
+        <div id="site-booster-grid" class="multi-grid grid-cols-2"></div>
+
+        <div class="ad-banner-wrapper "><div class="ad-label">SPONSORED / ADVERTISEMENT</div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7020422718957281" data-ad-slot="4934693710" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    let timerId = null;
+    const urlInput = document.getElementById('site-url-input');
+    const screenInput = document.getElementById('site-screen-count');
+    const timerSelect = document.getElementById('site-reload-timer');
+    const container = document.getElementById('site-booster-grid');
+    const timerStatus = document.getElementById('booster-timer-text');
+
+    function launchBooster() {
+        let url = urlInput.value.trim();
+        if (!url.startsWith('http://') && !url.startsWith('https://')) {
+            url = 'https://' + url;
+        }
+
+        let count = parseInt(screenInput.value) || 2;
+        if (count < 1) count = 1;
+        if (count > 12) count = 12;
+
+        container.innerHTML = '';
+        container.className = 'multi-grid';
+        if (count <= 2) container.classList.add('grid-cols-2');
+        else if (count <= 4) container.classList.add('grid-cols-2');
+        else container.classList.add('grid-cols-3');
+
+        for (let i = 1; i <= count; i++) {
+            const card = document.createElement('div');
+            card.className = 'iframe-card';
+            card.style.aspectRatio = '4 / 3';
+
+            card.innerHTML = `
+                <div class="iframe-card-header">
+                    <span><i class="fa-solid fa-globe"></i> Viewport #${i}</span>
+                    <button onclick="document.getElementById('site-frame-${i}').src = '${url}'"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+                <iframe id="site-frame-${i}" src="${url}" sandbox="allow-scripts allow-same-origin allow-popups" allowfullscreen></iframe>
+            `;
+            container.appendChild(card);
+        }
+
+        showToast(`Loaded ${count} viewport sessions!`, 'success');
+
+        clearInterval(timerId);
+        const reloadSec = parseInt(timerSelect.value);
+        if (reloadSec > 0) {
+            let countdown = reloadSec;
+            timerStatus.textContent = `Auto-refresh in: ${countdown}s`;
+
+            timerId = setInterval(() => {
+                countdown--;
+                if (countdown <= 0) {
+                    countdown = reloadSec;
+                    for (let i = 1; i <= count; i++) {
+                        const frame = document.getElementById(`site-frame-${i}`);
+                        if (frame) frame.src = url;
+                    }
+                }
+                timerStatus.textContent = `Auto-refresh in: ${countdown}s`;
+            }, 1000);
+        } else {
+            timerStatus.textContent = '';
+        }
+    }
+
+    document.getElementById('btn-load-booster').addEventListener('click', launchBooster);
+    launchBooster();
+});
+</script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4><i class="fa-brands fa-youtube"></i> PooreYouTuber Tools</h4>
+                <p>Discover 40+ free browser-based tools for creators: YouTube Multi Live &amp; Shorts viewers, 4K Thumbnail downloader, SEO tag generator, PDF &amp; Image converters, QR codes, and financial calculators.</p>
+                <div class="footer-social-links">
+                    <a href="https://youtube.com/@pooreyoutuber" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/pooreyoutuber" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Popular Tools</h5>
+                <ul>
+                    <li><a href="/tools/multi-live.html">Multi Live Browser</a></li>
+                    <li><a href="/tools/youtube-short-preview.html">Multi Shorts Views</a></li>
+                    <li><a href="/tools/youtube-thumbnail.html">Thumbnail Downloader</a></li>
+                    <li><a href="/tools/tags-generator.html">Viral Tags Generator</a></li>
+                    <li><a href="/tools/photo-to-pdf.html">Photo to PDF</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Categories</h5>
+                <ul>
+                    <li><a href="/index.html#youtube">YouTube Tools</a></li>
+                    <li><a href="/index.html#social">Social Multi-Browsers</a></li>
+                    <li><a href="/index.html#pdf_doc">PDF & Documents</a></li>
+                    <li><a href="/index.html#image">Image Converters</a></li>
+                    <li><a href="/index.html#seo_web">Web & SEO Utilities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Company & Legal</h5>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & Terms</a></li>
+                    <li><a href="/contact.html">Contact Support</a></li>
+                    <li><a href="/articles.html">Creator Guides</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PooreYouTuber Tools. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/disclaimer.html">Disclaimer</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/sitemap.xml">XML Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Global JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
